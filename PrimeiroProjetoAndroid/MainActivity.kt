@@ -1,4 +1,4 @@
-package com.example.primeiroprojetoandroid
+package br.unipar.primeiroprojeto
 
 import android.os.Bundle
 import android.view.View
