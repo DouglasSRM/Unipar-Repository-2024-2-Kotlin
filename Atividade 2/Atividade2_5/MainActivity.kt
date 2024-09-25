@@ -29,32 +29,29 @@ class MainActivity : AppCompatActivity() {
         val txtResultado = findViewById<TextView>(R.id.txtResultado)
 
         btnCalcular.setOnClickListener {
-
             val altura = edAltura.text.toString()
             val peso = edPeso.text.toString()
 
-            if (altura.isNotEmpty() && peso.isNotEmpty()) {
-
-                val alturaFinal = altura.toDouble()
-                val pesoFinal = peso.toDouble()
-                val imc = (pesoFinal / (alturaFinal * alturaFinal))
-
-                val imcFinal = String.format("%.2f",imc)
-
-                if (imc < 18.5) {
-                    txtResultado.text = "IMC $imcFinal: Abaixo do peso"
-                } else if (imc < 25) {
-                    txtResultado.text = "IMC $imcFinal: Peso normal"
-                } else if (imc < 30) {
-                    txtResultado.text = "IMC $imcFinal: Sobrepeso"
-                } else {
-                    txtResultado.text = "IMC $imcFinal: Obesidade"
-                }
-            } else {
+            if (altura.isEmpty() || peso.isEmpty()) {
                 txtResultado.text = "Insira os valores."
+                return
             }
 
-        }
+            val alturaFinal = altura.toDouble()
+            val pesoFinal = peso.toDouble()
+            val imc = (pesoFinal / (alturaFinal * alturaFinal))
 
+            val imcFinal = String.format("%.2f",imc)
+
+            val resultado: String
+            when {
+                imc < 18.5 -> resultado = "IMC $imcFinal: Abaixo do peso"
+                imc < 25 -> resultado = "IMC $imcFinal: Peso normal"
+                imc < 30 -> resultado = "IMC $imcFinal: Sobrepeso"
+                else -> resultado = "IMC $imcFinal: Obesidade"
+            }
+            txtResultado.text = resultado          
+        }
     }
+    
 }
