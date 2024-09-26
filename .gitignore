@@ -1,9 +1,7 @@
-
-
-# Compiled class file
+# Compiled class files
 *.class
 
-# Log file
+# Log files
 *.log
 
 # BlueJ files
@@ -21,25 +19,25 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# VM crash logs
 hs_err_pid*
 replay_pid*
 
-# Diretório de build
-/build/
-app/build/
+# Diretórios de build (global para múltiplas subpastas)
+**/build/
+**/captures/
 
-# Diretórios de cache locais
-/.idea/caches/
-/.idea/libraries/
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-/.idea/vcs.xml
-/.idea/compiler.xml
-/.idea/gradle.xml
-/.idea/jsLibraryMappings.xml
+# Diretórios de cache locais do Android Studio
+**/.idea/caches/
+**/.idea/libraries/
+**/.idea/modules.xml
+**/.idea/workspace.xml
+**/.idea/navEditor.xml
+**/.idea/assetWizardSettings.xml
+**/.idea/vcs.xml
+**/.idea/compiler.xml
+**/.idea/gradle.xml
+**/.idea/jsLibraryMappings.xml
 
 # Arquivos específicos do Android Studio
 *.iml
@@ -52,11 +50,8 @@ app/build/
 # Configurações locais de ambiente
 /local.properties
 
-# Logs
-*.log
-
 # Diretório de capturas de tela gerado no Android Studio
-captures/
+**/captures/
 
 # Arquivos de sistema operacional
 .DS_Store
@@ -66,13 +61,16 @@ Thumbs.db
 .gradle/
 **/build/
 **/captures/
+.idea/
+*.iml
+/local.properties
 
 # Arquivo de wrapper do Gradle
 !gradle-wrapper.jar
 !gradlew
 !gradlew.bat
 
-# Arquivos do sistema operacional
+# Arquivos de sistema operacional
 *.swp
 *.swo
 *~
@@ -89,7 +87,7 @@ lint/reports/
 lint/outputs/
 lint/results/
 
-# Diretório de geração de APK
+# Arquivos gerados de build do Android
 **/*.apk
 **/*.ap_
 
@@ -97,18 +95,19 @@ lint/results/
 out/
 
 # Relatórios de testes e benchmarks
-/test-results/
-benchmark/reports/
+**/test-results/
+**/benchmark/reports/
 
-# Arquivos de configuração do Firebase (geralmente não versionados por questões de segurança)
+# Arquivos de configuração do Firebase (por segurança)
 **/google-services.json
 **/GoogleService-Info.plist
 
-# Dependências desnecessárias para o controle de versão
-.idea/gradle.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/workspace.xml
-
 # Diretórios temporários
 /tmp/
+AtividadeRevisao/app/src/main/res/mipmap-hdpi/ic_launcher.webp
+AtividadeRevisao/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp
+/AtividadeRevisao/app/src/main/res/mipmap-xxxhdpi
+/AtividadeRevisao/app/src/main/res/mipmap-xxhdpi
+/AtividadeRevisao/app/src/main/res/mipmap-xhdpi
+/AtividadeRevisao/app/src/main/res/mipmap-mdpi
+/AtividadeRevisao/app/src/main/res/mipmap-anydpi-v26
