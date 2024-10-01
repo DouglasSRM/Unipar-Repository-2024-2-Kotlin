@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/ConstraitLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F1FFE1"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,9 +21,11 @@
             android:id="@+id/txtTitle"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#80FF85"
+            android:background="#6BD58D"
             android:gravity="center"
+            android:shadowColor="#373737"
             android:text="Verdejar"
+            android:textColor="#101010"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -34,7 +37,132 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:orientation="vertical"></LinearLayout>
+            android:background="#F1FFE1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtAddPlants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adicionar Plantas"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edNamePlant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nome da Planta"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textColorHint="#878787" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtNivel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Nível de cuidado:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rdbtnBaixo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:shadowColor="#000000"
+                        android:text="Baixo"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/rdbtnMedio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:shadowColor="#000000"
+                        android:text="Médio"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/rdbtnAlto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:shadowColor="#000000"
+                        android:text="Alto"
+                        android:textColor="@color/black" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtQuantidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Quantidade de água (ml):"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edQtdAgua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20sp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Exemplo: 200"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    android:textColorHint="#878787" />
+
+                <Button
+                    android:id="@+id/btnInserir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inserir" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listViewPlantas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </ListView>
+
+            <TextView
+                android:id="@+id/txtPlantasTotal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Plantas Cultivadas: 0"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
