@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TaffeBank</string>
+    <string name="txtTipo">Tipo Transação</string>
+    <string name="txtValor">Valor Transação</string>
+    <string name="txtDescricao">Descrição</string>
+    <string name="btnLancar">Lançar Transação</string>
+
+    <string-array name="tipo_transacao">
+        <item>Credito</item>
+        <item>Debito</item>
+    </string-array>
+</resources>
